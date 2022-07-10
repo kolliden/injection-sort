@@ -224,7 +224,7 @@ const check = (array, onAction) => {
  * @param array - The array to be sorted
  * @param onAction - a function that takes an object with two properties: type and data.
  */
-function bubbleSort(array, onAction) {
+function injectionSort(array, onAction) {
   console.log(array)
   for (let i = 1; i < array.length; i++) {
     let key = array[i];
@@ -254,7 +254,7 @@ const start = () => {
   drawAll();
 
   /* Calling the bubbleSort function, and passing in the randomArr array and a callback function. */
-  bubbleSort(randomArr ,(action) => {
+  injectionSort(randomArr ,(action) => {
     ticks++;
     setTimeout(() => {
       actionsMap[action.type](action, arrayMembers);
