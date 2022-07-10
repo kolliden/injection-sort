@@ -3,6 +3,7 @@
 let canvas = document.getElementById('cv');
 let ctx = canvas.getContext('2d');
 let startButton = document.getElementById('bsstart');
+let iframe = document.getElementById("wiki");
 
 canvas.width = 0;
 canvas.height = 0;
@@ -245,6 +246,7 @@ function injectionSort(array, onAction) {
 const start = () => {
   initCanvas();
   startButton.remove();
+  iframe.remove();
 
   randomArr = initRandomArr(arr);
   arrayMembers = randomArr.map((v, i) => {
